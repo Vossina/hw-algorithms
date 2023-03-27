@@ -21,3 +21,21 @@ inputs = [
 ]
 
 # тут ваше решение:
+for input in inputs:
+    s, t = input
+    # print(s, t)
+    # s = list(s)
+    # t = list(t)
+    # s = s.sort()
+    # t = t.sort()
+    # dif = set(t).difference(set(s))
+    # print(list(dif))
+    for i in range(len(t)):
+        sim = t[i]
+        if sim in s:
+            s = s.replace(sim, '')
+        else:
+            print(sim)
+            break
+    # res = [x for x in s + t if x not in s or x not in t]  # создавала пользовательский список, но он все равно не так выводит
+    # print(res)

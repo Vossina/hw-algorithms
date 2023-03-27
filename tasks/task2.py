@@ -20,3 +20,17 @@ inputs = [
 ]
 
 # тут ваше решение:
+
+for input in inputs:
+    input_list = input.split(" ")
+    values = list(map(int, input_list))
+    n = 0
+    enum_numbers = 0
+    for value in values:
+        if value % 2 == 0:
+            enum_numbers += 1
+        n += 1
+    if enum_numbers == n:
+        print('WIN')
+    else:
+        print('FAIL')

@@ -24,3 +24,8 @@ inputs = [
 ]
 
 # тут ваше решение:
+for input in inputs:
+    if int(input) % 4 == 0:
+        print(True)
+    else:
+        print(False)

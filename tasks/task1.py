@@ -21,3 +21,15 @@ inputs = [
 ]
 
 # тут ваше решение:
+for input in inputs:
+    input_list = input.split(" ")
+    print(input_list)
+    # number_list = []
+    # for string in input_list:
+    #     string = int(string)
+    #     number_list.append(string)
+    number_list = [int(string) for string in input_list]  # использовали list comprehension вместо цикла for
+    # number_list = list(map(int, input_list)) также для генерации списка используют функцию map(), но list comprehension предпочтительнее
+    a, x, b, c = number_list
+    y = a * x**2 + b * x + c
+    print(y)
