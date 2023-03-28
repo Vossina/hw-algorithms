@@ -24,8 +24,15 @@ inputs = [
 ]
 
 # тут ваше решение:
+# for input in inputs:
+#     if int(input) % 4 == 0:
+#         print(True)
+#     else:
+#         print(False)
 for input in inputs:
-    if int(input) % 4 == 0:
+    n = int(input)
+    sqrt = n ** (0.25)
+    if n == 1 or n == 4 or sqrt % 2 == 0:
         print(True)
     else:
         print(False)
