@@ -34,3 +34,38 @@ inputs = [
 ]
 
 # тут ваше решение:
+
+
+def sort_key(array):
+    return array[1]
+
+
+for input in inputs:
+    n = len(input)
+    coordinates_string = [num.split() for num in input]
+    coordinates = []
+    for coordinate in coordinates_string:
+        coordinate = list(map(int, coordinate))
+        coordinates.append(coordinate)
+    # coordinates = list(map(list(map(int, input),)
+    coordinates = sorted(coordinates, key=sort_key)
+    # print(coordinates)
+
+k = n - 1
+while k > 0:
+    if coordinates[k][0] >= coordinates[k - 1][0] \
+            and coordinates[k][1] >= coordinates[k - 1][1] \
+            and coordinates[k][0] <= coordinates[k - 1][1]:
+        coordinates[k][0] = coordinates[k - 1][0]
+        coordinates.pop(k - 1)
+    elif coordinates[k][0] <= coordinates[k - 1][0] \
+            and coordinates[k][1] >= coordinates[k - 1][1]:
+        coordinates.pop(k - 1)
+    elif coordinates[k][0] >= coordinates[k - 1][0] \
+            and coordinates[k][1] <= coordinates[k - 1][1]:
+        coordinates.pop(k)
+    k -= 1
+
+for coordinate in coordinates:
+    print((' '.join(list(map(str, coordinate)))))
+print()

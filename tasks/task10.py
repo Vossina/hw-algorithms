@@ -29,9 +29,11 @@ for input in inputs:
     # for i in rev:
     #     k = out + i
     print("".join([out + i for i in rev]))
-# for i in range(len(string)):
+#
+# # for i in range(len(string)):
 #     if string[i] >= string[i]:
 #         s = s.replace(sim, '')
+#
 # for i in inputs:
 #     out = ''
 #     k = list(reversed(sorted(i.split(" "))))
