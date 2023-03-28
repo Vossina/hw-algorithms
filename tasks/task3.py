@@ -45,5 +45,5 @@ def chaos_calculator(n, temp):
 for input in inputs:
     n = int(input[0])
     temp = list(map(int, input[1].split()))
-    print(chaos_calculator(n,temp))
-#dfkb
+    print(chaos_calculator(n, temp))
+
