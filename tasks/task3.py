@@ -27,4 +27,22 @@ inputs = [
     ('1', '4')                   # -> 1
 ]
 
+
 # тут ваше решение:
+for input in inputs:
+    n = int(input[0])
+    temp = list(map(int, input[1].split()))
+    
+    if n == 1:
+        print(1)
+        break
+
+    chaos = 0
+    for i in range(n):
+        if i == 0 and temp[i] > temp[i + 1]:
+            chaos += 1
+        elif i == (n - 1) and temp[i] > temp[i - 1]:
+            chaos += 1
+        elif temp[i] > temp[i - 1] and temp[i] > temp[i + 1]:
+            chaos += 1
+    print(chaos)
