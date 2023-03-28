@@ -29,14 +29,9 @@ inputs = [
 
 
 # тут ваше решение:
-for input in inputs:
-    n = int(input[0])
-    temp = list(map(int, input[1].split()))
-    
+def chaos_calculator(n, temp):
     if n == 1:
-        print(1)
-        break
-
+        return 1
     chaos = 0
     for i in range(n):
         if i == 0 and temp[i] > temp[i + 1]:
@@ -45,4 +40,10 @@ for input in inputs:
             chaos += 1
         elif temp[i] > temp[i - 1] and temp[i] > temp[i + 1]:
             chaos += 1
-    print(chaos)
+    return chaos
+
+for input in inputs:
+    n = int(input[0])
+    temp = list(map(int, input[1].split()))
+    print(chaos_calculator(n,temp))
+#dfkb
